@@ -14,6 +14,7 @@ export default function LanguageSwitcher() {
   const { language, setLanguage } = useI18n();
 
   const languages = [
+    { code: 'en', name: 'Bangla', flag: 'BD' },
     { code: 'en', name: 'English', flag: '🇬🇧' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
