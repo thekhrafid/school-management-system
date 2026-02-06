@@ -12,11 +12,12 @@ export async function POST(req: Request){
         }
         // create notice
         const notice = await prisma.notice.create({
-            date:{
+            data:{
                 title,
                 content,
             }
         })
+        return NextResponse.json(notice,{status:201});
     } catch (error: any) {
         return NextResponse.json({message:"Notice creation failed", error:error.message},{status:500});
         

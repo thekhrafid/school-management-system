@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
+import { headers } from "next/headers";
 
 export async function POST(req:Request){
     try {
@@ -16,10 +17,16 @@ export async function POST(req:Request){
 
         const hashedpassword = await bcrypt.hash(password, 10);
 
+        // IP address collect 
+        const headerslist = await headers();
+        
+        const ipAddress = headerslist.get("x-forwarded-for")  ||
+        headerslist.get("x-real-ip") || "unknown"
+
         // create user 
         const user = await prisma.user.create({
             data:{
-                name, email, password:hashedpassword, role,
+                name, email, password:hashedpassword, role, ipAddress,
             },
         });
         return NextResponse.json(user,{status:201});
@@ -38,6 +45,7 @@ export async function GET(){
             name: true,
             email: true,
             role: true,
+            ipAddress: true,
             createdAt: true,
         }
     })

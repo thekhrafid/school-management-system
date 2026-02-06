@@ -7,8 +7,8 @@ export async function POST(req:Request){
 
         const {studentId, date, status} = body;
 
-        if(!studentId || !date || !status === undefined){
-            return NextResponse.json({message: "Studentid, date and status are required"}, {status:400});
+         if (!studentId || !date || status === undefined){
+            return NextResponse.json({message: "studentId, date and status are required"}, {status:400});
         }
 
         // create attendance record
