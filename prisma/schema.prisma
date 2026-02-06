@@ -21,7 +21,7 @@ model User {
   password  String
   role      Role
   ipAddress String
-  createAt  DateTime @default(now())
+  createdAt DateTime @default(now())
 
   student Student?
   teacher Teacher?
