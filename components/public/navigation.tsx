@@ -78,7 +78,7 @@ export default function Navigation() {
             {isAuthenticated && user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="gap-2 bg-transparent">
+                  <Button variant="outline" className="gap-2 bg-primary">
                     <User className="w-4 h-4" />
                     {user.name}
                   </Button>
