@@ -3,7 +3,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const news = [
@@ -48,10 +47,10 @@ export default function News() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {news.map((item) => (
-            <Card key={item.id} className="border-border hover:shadow-lg transition-shadow flex flex-col">
+            <Card key={item.id} className="border border-green-700 hover:shadow-lg transition-shadow flex flex-col">
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between mb-3">
-                  <Badge variant="outline">{item.category}</Badge>
+                  <Badge variant="outline" className='border border-green-700'>{item.category}</Badge>
                 </div>
                 <CardTitle className="text-foreground line-clamp-2">
                   {item.title}

@@ -6,8 +6,8 @@ import { ArrowRight, BookOpen } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center banner">
-      <div className="overly w-full h-full  text-center px-4 py-12">
+    <section className="w-full flex items-center justify-center banner">
+      <div className="overly text-center px-4 py-12">
         <div className="">
           <h1 className="text-5xl md:text-7xl font-bold text-white md:px-50">
             <span className='text-green-500'>Chandanpur</span> Secondary High School

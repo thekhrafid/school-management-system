@@ -57,17 +57,17 @@ export default function Features() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             Why Choose Us
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
             Discover what makes Chandanpur Secondary High School the preferred choice for quality education
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="border-border hover:shadow-lg transition-shadow">
+            <Card key={index} className="border-green-700 hover:shadow-lg transition-shadow">
               <CardHeader className="pb-3">
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className="text-foreground">{feature.title}</CardTitle>
               </CardHeader>
