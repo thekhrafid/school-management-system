@@ -54,7 +54,7 @@ export default function Contact() {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     required
-                    className="border-border"
+                    className="border-green-700"
                   />
                 </div>
                 <div>
@@ -101,7 +101,7 @@ export default function Contact() {
           <div className="space-y-6">
             <Card className="border-border">
               <CardContent className="pt-6 flex gap-4">
-                <MapPin className="w-6 h-6 text-accent flex-shrink-0" />
+                <MapPin className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Location</h3>
                   <p className="text-muted-foreground">
@@ -115,7 +115,7 @@ export default function Contact() {
 
             <Card className="border-border">
               <CardContent className="pt-6 flex gap-4">
-                <Phone className="w-6 h-6 text-accent flex-shrink-0" />
+                <Phone className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                   <p className="text-muted-foreground">
@@ -129,7 +129,7 @@ export default function Contact() {
 
             <Card className="border-border">
               <CardContent className="pt-6 flex gap-4">
-                <Mail className="w-6 h-6 text-accent flex-shrink-0" />
+                <Mail className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
                   <p className="text-muted-foreground">
