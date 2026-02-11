@@ -40,7 +40,7 @@ export default function AttendanceView() {
                 <div>
                   <p className="text-sm text-muted-foreground">Present</p>
                   <div className="flex items-center gap-1 mt-1">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-green-700" />
                     <p className="font-medium text-foreground">{record.present}</p>
                   </div>
                 </div>
