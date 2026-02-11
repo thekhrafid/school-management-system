@@ -1,10 +1,14 @@
-import "dotenv/config";
-import { PrismaPg } from '@prisma/adapter-pg'
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "./generated/prisma/client";
 
-const connectionString = `${process.env.DIRECT_URL}`
+const connectionString = process.env.DIRECT_URL as string;
 
-const adapter = new PrismaPg({ connectionString })
-const prisma = new PrismaClient({ adapter })
+if (!connectionString) {
+  throw new Error("DIRECT_URL is not set");
+}
 
-export { prisma }
+const adapter = new PrismaPg({ connectionString });
+
+export const prisma = new PrismaClient({
+  adapter,
+});
